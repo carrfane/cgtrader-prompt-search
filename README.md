@@ -1,24 +1,39 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Prompt on Rails
 
-Things you may want to cover:
+## Description
+Prompt on Rails is a dynamic application designed to help users search for prompts based on their input. Leveraging a user-friendly interface and efficient search algorithms, the app provides a seamless experience in finding relevant prompts for various needs.
 
-* Ruby version
+## Features
+- **Prompt Search**: Enter your keywords to receive a curated list of prompts.
+- **User-friendly Interface**: Easy navigation and a clear layout to enhance user experience.
 
-* System dependencies
+## Technology Stack
+- **Backend**: Ruby on Rails
+- **Database**: PostgreSQL
+- **Search Engine**: Elasticsearch
 
-* Configuration
+## Installation
+1. **Clone the Repository**
+   ```bash
+   git clone [repository-link]
+   cd [repository-name]
+   ```
 
-* Database creation
+2. **Install Dependencies**
+   ```bash
+   bundle install
+   ```
 
-* Database initialization
+3. **Database Setup**
+   ```bash
+   rake db:create
+   rake db:migrate
+   ```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+4. **Run the Application**
+   ```bash
+   rails server
+   ```
+## License
+MIT
