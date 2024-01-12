@@ -1,0 +1,22 @@
+version: '3'
+services:
+  # web:
+  #   image: rails:latest
+  #   build: .
+  #   command: rails server -p 3000 -b '0.0.0.0'
+  #   volumes:
+  #     - .:/usr/src/app
+  #   ports:
+  #     - "3000:3000"
+  #   depends_on:
+  #     - elasticsearch
+  #   environment:
+  #     ELASTICSEARCH_URL: http://elasticsearch:9200
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.11.4
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+    ports:
+      - "9200:9200"
