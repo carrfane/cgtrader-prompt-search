@@ -16,24 +16,31 @@ Prompt on Rails is a dynamic application designed to help users search for promp
 ## Installation
 1. **Clone the Repository**
    ```bash
-   git clone [repository-link]
-   cd [repository-name]
+   git clonegit@github.com:carrfane/cgtrader-prompt-search.git
    ```
 
-2. **Install Dependencies**
+2. **Navigate to directory**
    ```bash
-   bundle install
+   cd cgtrader-prompt-search
    ```
 
-3. **Database Setup**
+3. **Grant permissions to start.sh script**
    ```bash
-   rake db:create
-   rake db:migrate
+   chmod +x start.sh
    ```
 
-4. **Run the Application**
+4. **Build Docker**
    ```bash
-   rails server
+   docker compose build
+   ```
+5. **Launch Docker**
+   ```bash
+   docker compose up
+   ```
+
+6. **Populate Database**
+   ```bash
+   docker compose run web rails import_prompts
    ```
 ## License
 MIT

@@ -1,17 +1,28 @@
 version: '3'
 services:
-  # web:
-  #   image: rails:latest
-  #   build: .
-  #   command: rails server -p 3000 -b '0.0.0.0'
-  #   volumes:
-  #     - .:/usr/src/app
-  #   ports:
-  #     - "3000:3000"
-  #   depends_on:
-  #     - elasticsearch
-  #   environment:
-  #     ELASTICSEARCH_URL: http://elasticsearch:9200
+  web:
+    build: .
+    command: ./start.sh
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+      - elasticsearch
+    environment:
+      RAILS_ENV: development
+      DATABASE_URL: postgres://user:password@postgres/cgtrader_dev
+      ELASTICSEARCH_URL: http://elasticsearch:9200
+
+  postgres:
+    image: postgres
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: user
+      POSTGRES_DB: cgtrader_dev
 
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:8.11.4
