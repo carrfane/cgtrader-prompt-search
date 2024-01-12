@@ -1,13 +1,14 @@
 class SearchController < ApplicationController
-  def index
-    @search_term = params[:q]
-    @results = Prompt.search(@search_term, fields: [:prompt], limit: 10)
-  end
+  before_action :search_terms
 
   def search
+    render partial: "results"
+  end
+
+  private
+
+  def search_terms
     @search_term = params[:q]
     @results = Prompt.search(@search_term, fields: [:prompt], limit: 10)
-
-    render partial: "results"
   end
 end
