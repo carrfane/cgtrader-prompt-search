@@ -1,5 +1,9 @@
 
 # Prompt on Rails
+## Video Intro
+
+https://github.com/carrfane/cgtrader-prompt-search/assets/7390516/a8453db8-9ecd-4993-984b-4965e89b0479
+
 
 ## Description
 Prompt on Rails is a dynamic application designed to help users search for prompts based on their input. Leveraging a user-friendly interface and efficient search algorithms, the app provides a seamless experience in finding relevant prompts for various needs.
