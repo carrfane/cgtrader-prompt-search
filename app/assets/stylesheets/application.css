@@ -855,7 +855,7 @@ button {
   min-height: 100vh;
   display: flex;
   font-family: 'Poppins', sans-serif;
-  background: url("/assets/search_bg.png");
+  background: url("/search_bg.png");
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: 100%;
