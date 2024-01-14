@@ -950,6 +950,10 @@ button {
   fill: #222;
 }
 
+.result__title {
+  color: #222;
+}
+
 .s130 form .inner-form .input-field.second-wrap {
   min-width: 216px;
 }
@@ -967,6 +971,10 @@ button {
   background: #00ad5f;
   transition: all .2s ease-out, color .2s ease-out;
   font-weight: 300;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .s130 form .inner-form .input-field.second-wrap .btn-search:hover {

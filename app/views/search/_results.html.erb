@@ -1,15 +1,23 @@
-<div class="search-results" data-search-target="results">
-  <% if @results.present? %>
-    <% @results.each do |result| %>
-      <div class="result" data-action="click->search#copy">
-        <div class="result__prompt"><%= result.prompt %></div>
+<%= turbo_frame_tag "results" do %>
+  <div class="search-results" data-search-target="results" data-controller="search">
+    <% if @results.present? %>
+      <% @results.each do |result| %>
+        <div class="result" data-action="click->search#copy">
+          <div class="result__prompt"><%= result.prompt %></div>
+        </div>
+      <% end %>
+    <% end %>
+
+    <%if @search.present? %>
+      <div hidden data-search-target="search">
+        <%= @search %>
       </div>
     <% end %>
-  <% end %>
 
-  <% if @search_term.present? && @result.blank? %>
-    <div class="result">
-      <div class="result__title">No results found</div>
-    </div>
-  <% end %>   
-</div>
+    <% if @search.present? && @results.blank? %>
+      <div class="result">
+        <div class="result__title">No results found</div>
+      </div>
+    <% end %>   
+  </div>
+<% end %>
