@@ -16,6 +16,7 @@ Prompt on Rails is a dynamic application designed to help users search for promp
 - **Backend**: Ruby on Rails
 - **Database**: PostgreSQL
 - **Search Engine**: Elasticsearch
+- **Reactivity**: Turbo Frames
 
 ## Installation
 1. **Clone the Repository**
