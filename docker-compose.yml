@@ -29,5 +29,7 @@ services:
     environment:
       - discovery.type=single-node
       - xpack.security.enabled=false
+    volumes:
+      - ./tmp/es:/usr/share/elasticsearch/data
     ports:
       - "9200:9200"
